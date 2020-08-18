@@ -58,7 +58,7 @@ font pango:Ubuntu 10
 # #---AUTOSTART---# #
 exec_always --no-startup-id start-pulseaudio-x11 # Audio manager
 exec_always --no-startup-id feh --bg-scale $HOME/Wallpapers/hk.jpg # Wallpapaer (maybe changing it with a script)
-exec_always --no-startup-id compton -f 
+exec_always --no-startup-id picom -b
 # exec --no-startup-id dunst # Notification daemon (currently not using it)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Status bar
 exec --no-startup-id nm-applet # Network manager in systray
