@@ -47,27 +47,28 @@ for_window [instance="dropdown_*"] move position center
 set $TERMINAL "termite"
 set $BROWSER "google-chrome-stable"
 set $MUSIC "spotify"
-set $FILE_MANAGER "pcmanfm"
+set $FILE_MANAGER "termite -e ranger"
 
 
 # #---Font---# #
 # Since it's managed by polybar it actually doesn't matter
-font pango:Ubuntu 10
+# font pango:Ubuntu 10
 
 
 # #---AUTOSTART---# #
 exec_always --no-startup-id start-pulseaudio-x11 # Audio manager
-exec_always --no-startup-id feh --bg-scale $HOME/Wallpapers/hk.jpg # Wallpapaer (maybe changing it with a script)
+exec_always --no-startup-id feh --bg-scale ~/Wallpapers/hk.jpg # Wallpapaer (maybe changing it with a script)
 exec_always --no-startup-id picom -b
 # exec --no-startup-id dunst # Notification daemon (currently not using it)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Status bar
 exec --no-startup-id nm-applet # Network manager in systray
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+exec --no-startup-id xfce4-power-manager # Power manager
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys # Set keymap to international us with no deadkeys
+exec --no-startup-id xbindkeys
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork # Change lockscren to i3lock-fancy
 
 
 # #---Bindings---# #
@@ -126,16 +127,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # focus the child container
 #bindsym $mod+d focus child
 
-
-# #---Multimedia Keys---# #
-# Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id volume.sh -i
-bindsym XF86AudioLowerVolume exec --no-startup-id volume.sh -d
-bindsym XF86AudioMute exec --no-startup-id volume.sh -m
-
-# Brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # #---Workspaces---# #
 # Workspace list
