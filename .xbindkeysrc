@@ -1,9 +1,9 @@
 # Increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +1000"
+"pamixer -i 5"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"pactl set-sink-volume @DEFAULT_SINK@ -1000"
+"pamixer -d 5"
    XF86AudioLowerVolume
 
 # Mute volume
