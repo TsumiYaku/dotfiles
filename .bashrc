@@ -156,6 +156,7 @@ alias la="ls -la"
 alias i3conf="vim $HOME/.config/i3/config"
 alias gitconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# #---PATH EXPORTS---# #
+# #---VARIABLE EXPORTS---# #
 export PATH="~/.scripts:$PATH"
+export EDITOR=vim
 
