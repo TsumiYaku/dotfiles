@@ -32,22 +32,23 @@ set $urgent-bg-color     #E53935
 
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
-for_window [instance="dropdown_*"] floating enable
-for_window [instance="dropdown_*"] move scratchpad
-for_window [instance="dropdown_*"] sticky enable
-for_window [instance="dropdown_*"] scratchpad show
-for_window [instance="dropdown_tmuxdd"] resize set 625 450
-for_window [instance="dropdown_dropdowncalc"] resize set 800 300
-for_window [instance="dropdown_tmuxdd"] border pixel 3
-for_window [instance="dropdown_dropdowncalc"] border pixel 2
-for_window [instance="dropdown_*"] move position center
-
+# for_window [instance="dropdown_*"] floating enable
+# for_window [instance="dropdown_*"] move scratchpad
+# for_window [instance="dropdown_*"] sticky enable
+# for_window [instance="dropdown_*"] scratchpad show
+# for_window [instance="dropdown_tmuxdd"] resize set 625 450
+# for_window [instance="dropdown_dropdowncalc"] resize set 800 300
+# for_window [instance="dropdown_tmuxdd"] border pixel 3
+# for_window [instance="dropdown_dropdowncalc"] border pixel 2
+# for_window [instance="dropdown_*"] move position center
+ 
 
 # #---Applications variables---# #
 set $TERMINAL "termite"
 set $BROWSER "google-chrome-stable"
 set $MUSIC "spotify"
 set $FILE_MANAGER "termite -e ranger"
+set $PROCESS_MANAGER "termite -e htop"
 
 
 # #---Font---# #
@@ -64,7 +65,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Status bar
 exec --no-startup-id nm-applet # Network manager in systray
 exec --no-startup-id xfce4-power-manager # Power manager
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys # Set keymap to international us with no deadkeys
-exec --no-startup-id xbindkeys
+exec_always --no-startup-id xbindkeys # Multimedia keys binding
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -79,6 +80,7 @@ bindsym $mod+m exec $MUSIC
 bindsym $mod+t exec --no-startup-id telegram-desktop
 bindsym $mod+d exec rofi -show run 
 bindsym $mod+f exec --no-startup-id $FILE_MANAGER
+bindysm $mod+h exec --no-startup-id $PROCESS_MANAGER
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # Screenshots
