@@ -156,6 +156,13 @@ alias la="ls -la"
 alias i3conf="vim $HOME/.config/i3/config"
 alias gitconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# #---PACMAN ALIASES---# #
+alias pacup='sudo pacman -Syu'
+alias pacin='sudo pacman -S'
+alias pacrm='sudo pacman -Rns'
+alias pacsearch='sudo pacman -Ss'
+alias pacls='sudo pacman -Q'
+
 # #---VARIABLE EXPORTS---# #
 export PATH="~/.scripts:$PATH"
 export EDITOR=vim
