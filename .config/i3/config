@@ -94,17 +94,29 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+q kill
 bindsym $mod+Shift+f fullscreen toggle
 
-## Change windows focus (yeah, call me normie) 
+## Change windows focus 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+## Change windows focus (hjkl) 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 ## move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+## move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
