@@ -64,7 +64,7 @@ exec_always --no-startup-id udiskie # USB automount
 # exec --no-startup-id dunst # Notification daemon (currently not using it)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh # Status bar
 exec --no-startup-id nm-applet # Network manager in systray
-exec --no-startup-id xfce4-power-manager # Power manager
+exec_always --no-startup-id xfce4-power-manager # Power manager
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys # Set keymap to international us with no deadkeys
 exec_always --no-startup-id xbindkeys # Multimedia keys binding
 

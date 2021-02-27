@@ -160,10 +160,11 @@ alias gitconfig='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias pacup='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
-alias pacsearch='sudo pacman -Ss'
+alias pacsearch='pacman -Ss'
 alias pacls='sudo pacman -Q'
 
 # #---VARIABLE EXPORTS---# #
 export PATH="~/.scripts:$PATH"
 export EDITOR=vim
+export RANGER_LOAD_DEFAULT_RC=false
 
